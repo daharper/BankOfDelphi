@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F181DE7F-DFEC-4BEC-A295-BF64E65560F6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="BankOfDelphi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="BankOfDelphiTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="BankOfDelphi">
+        <MSBuild Projects="BankOfDelphi.dproj"/>
+    </Target>
+    <Target Name="BankOfDelphi:Clean">
+        <MSBuild Projects="BankOfDelphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BankOfDelphi:Make">
+        <MSBuild Projects="BankOfDelphi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BankOfDelphiTests">
+        <MSBuild Projects="BankOfDelphiTests.dproj"/>
+    </Target>
+    <Target Name="BankOfDelphiTests:Clean">
+        <MSBuild Projects="BankOfDelphiTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BankOfDelphiTests:Make">
+        <MSBuild Projects="BankOfDelphiTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="BankOfDelphi;BankOfDelphiTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="BankOfDelphi:Clean;BankOfDelphiTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="BankOfDelphi:Make;BankOfDelphiTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
