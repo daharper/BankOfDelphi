@@ -40,7 +40,7 @@ type
 
 implementation
 
-{ TMyTestObject }
+{ TBankTest }
 
 {------------------------------------------------------------------------------------------------------------}
 procedure TBankTest.TestCreateAccount(const AAccountName: string);

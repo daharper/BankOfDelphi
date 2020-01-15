@@ -3,16 +3,16 @@
   <culture-info current-culture="en" current-uiculture="en" />
   <test-suite type="Assembly" name="BankOfDelphiTests.exe" executed="true" result="Success" success="True" time="0.002" asserts="0">
     <results>
-        <test-suite type="Namespace" name="uBankTests" executed="true" result="Success" success="True" time="0.001" asserts="0" >
+        <test-suite type="Namespace" name="uBankTests" executed="true" result="Success" success="True" time="0.002" asserts="0" >
           <results>
-              <test-suite type="Fixture" name="TBankTest" executed="True" result="Success" success="True" time="0.001" >
+              <test-suite type="Fixture" name="TBankTest" executed="True" result="Success" success="True" time="0.002" >
                 <results>
                   <test-case name="TestCreateAccount.Create valid account" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="TestCreateAccount.Create valid account" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="TestCreateAccount.Create valid account" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="TestInvalidNameRejected" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="TestDeposit" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                  <test-case name="TestWithdraw" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestWithdraw" executed="True" result="Success" success="True" time="0.001" asserts="0" />
                   <test-case name="TestMiniStatement" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                 </results>
               </test-suite>
