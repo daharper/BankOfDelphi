@@ -210,7 +210,7 @@ end;
 {------------------------------------------------------------------------------------------------------------}
 constructor TTransaction.Create(AAmount: Currency; ADescription: string);
 begin
-  if (AAmount < 0) then
+  if (AAmount <= 0) then
     raise EArgumentException.Create('Transaction amount must be greater than zero');
 
   FId := AtomicIncrement(FIdSeed);  
