@@ -264,23 +264,27 @@ var
 begin
   Sb := TStringBuilder.Create;
 
-  Sb.Append('Bank of Delphi MiniStatement')
-    .AppendLine;
-
-  for Account in ABank do begin
-    Balance := CurrToStrF(Account.GetBalance, ffCurrency, 2);
-    
-    Sb.AppendLine
-      .Append(Format('Act: %-45s Bal: %s', [Account.Name, Balance]))
+  try
+    Sb.Append('Bank of Delphi MiniStatement')
       .AppendLine;
-       
-    for Transaction in Account do begin
-      sb.Append(#9 + Transaction.ToString)
+
+    for Account in ABank do begin
+      Balance := CurrToStrF(Account.GetBalance, ffCurrency, 2);
+
+      Sb.AppendLine
+        .Append(Format('Act: %-45s Bal: %s', [Account.Name, Balance]))
         .AppendLine;
+
+      for Transaction in Account do begin
+        sb.Append(#9 + Transaction.ToString)
+          .AppendLine;
+      end;
     end;
+
+    Result := sb.ToString.Trim;
+  finally
+    FreeAndNil(Sb);
   end;
-  
-  Result := sb.ToString.Trim;
 end;
 
 end.
