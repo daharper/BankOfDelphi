@@ -1,3 +1,3 @@
 # BankOfDelphi
 
-Medical_Objects test
+Coding challenge for a job interview.
