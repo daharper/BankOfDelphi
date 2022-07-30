@@ -1,3 +1,3 @@
 # BankOfDelphi
 
-Coding challenge for a job interview.
+Quick Coding challenge for a job interview.
